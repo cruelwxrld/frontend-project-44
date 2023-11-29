@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import {getName, getAnswer} from '../src/cli.js';
 
 console.log('Welcome to the Brain Games!');
@@ -8,7 +9,7 @@ console.log(`Hello, ${name}!`);
 
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-function getEven(result = 1) {
+function getEven(result = 0) {
     for (let i = 0; i !== 3;) {
         var randomValue = Math.floor(Math.random() * 100);
     
@@ -23,6 +24,7 @@ function getEven(result = 1) {
             console.log(`Let's try again, ${name}!`);
             break;
         }
+
     
         if (randomValue % 2 === 0 && answer === 'yes') {
             console.log('Correct!')
@@ -43,7 +45,7 @@ function getEven(result = 1) {
         }
     }
 
-    if (result !== 1) {
+    if (result === 3) {
         console.log(`Congratulations, ${name}!`)
     }
         
