@@ -14,7 +14,9 @@ function arrayRandElement(arr = ['*', '+', '-']) {
   return arr[rand];
 }
 
-function getCalc(result = 0) {
+function getCalc() {
+  let result = 0;
+
   for (let i = 0; i !== 3;) {
     const randomValue = Math.floor(Math.random() * 100);
     const randomValue2 = Math.floor(Math.random() * 100);
