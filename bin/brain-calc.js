@@ -24,13 +24,6 @@ function getCalc(result = 0) {
 
     const answer = Number(getAnswer());
 
-    if (isNaN(answer)) {
-      console.log(`'${answer}' is not a number. Please enter a valid number.`);
-      continue;
-    }
-
-    let newResult = result;
-
     if (randomElement === '*') {
       const mult = Number(randomValue * randomValue2);
       if (answer !== mult) {
@@ -39,8 +32,8 @@ function getCalc(result = 0) {
         break;
       } else {
         console.log('Correct!');
-        newResult++;
-        i++;
+        result += 1;
+        i += 1;
       }
     } else if (randomElement === '+') {
       const sum = Number(randomValue + randomValue2);
@@ -50,8 +43,8 @@ function getCalc(result = 0) {
         break;
       } else {
         console.log('Correct!');
-        newResult++;
-        i++;
+        result += 1;
+        i += 1;
       }
     } else if (randomElement === '-') {
       const minus = Number(randomValue - randomValue2);
@@ -61,8 +54,8 @@ function getCalc(result = 0) {
         break;
       } else {
         console.log('Correct!');
-        newResult++;
-        i++;
+        result += 1;
+        i += 1;
       }
     }
   }
