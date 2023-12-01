@@ -45,7 +45,6 @@ function findNOD(item = 0) {
     }
 
     const answer = getAnswer();
-    const value = result;
 
     if (Number(result) === Number(answer)) {
       console.log('Correct!');
@@ -64,3 +63,4 @@ function findNOD(item = 0) {
 }
 
 findNOD();
+

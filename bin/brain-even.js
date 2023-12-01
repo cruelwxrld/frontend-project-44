@@ -26,7 +26,7 @@ function getEven(result = 0, maxQuestions = 3) {
     }
 
     const isCorrect = (randomValue % 2 === 0 && answer === 'yes') ||
-                      (randomValue % 2 !== 0 && answer === 'no');
+      (randomValue % 2 !== 0 && answer === 'no');
 
     if (isCorrect) {
       console.log('Correct!');

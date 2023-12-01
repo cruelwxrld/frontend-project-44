@@ -44,9 +44,7 @@ function findElementProgression(item = 0) {
 
     arr[randomPos - 1] = missingItem;
 
-    for (let i = 0; i < arr.length; i += 1) {
-      result += arr[i] + ' ';
-    }
+    result = arr.join(' '); // Используем метод join для объединения элементов массива в строку
 
     console.log(`Question: ${result}`);
 
