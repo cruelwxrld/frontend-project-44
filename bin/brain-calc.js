@@ -23,6 +23,7 @@ function getCalc(result = 0) {
     console.log(`Question: ${randomValue} ${randomElement} ${randomValue2}`);
 
     const answer = Number(getAnswer());
+    const newResult = result + 1;
 
     if (randomElement === '*') {
       const mult = Number(randomValue * randomValue2);
@@ -32,7 +33,7 @@ function getCalc(result = 0) {
         break;
       } else {
         console.log('Correct!');
-        result += 1;
+        newResult += 1;
         i += 1;
       }
     } else if (randomElement === '+') {
@@ -43,7 +44,7 @@ function getCalc(result = 0) {
         break;
       } else {
         console.log('Correct!');
-        result += 1;
+        newResult += 1;
         i += 1;
       }
     } else if (randomElement === '-') {
@@ -54,13 +55,13 @@ function getCalc(result = 0) {
         break;
       } else {
         console.log('Correct!');
-        result += 1;
+        newResult += 1;
         i += 1;
       }
     }
   }
 
-  if (result === 3) {
+  if (newResult === 3) {
     console.log(`Congratulations, ${name}!`);
   }
 }
