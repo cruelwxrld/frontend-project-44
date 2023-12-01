@@ -9,7 +9,7 @@ console.log(`Hello, ${name}!`);
 
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-function getEven(result = 0, maxQuestions = 3) {
+function getEven(maxQuestions = 3) {
   for (let i = 0; i !== maxQuestions;) {
     const randomValue = Math.floor(Math.random() * 100);
 
@@ -25,23 +25,22 @@ function getEven(result = 0, maxQuestions = 3) {
       break;
     }
 
-    const isCorrect = (randomValue % 2 === 0 && answer === 'yes') ||
-      (randomValue % 2 !== 0 && answer === 'no');
+    const isCorrect = (randomValue % 2 === 0 && answer === 'yes')
+                      || (randomValue % 2 !== 0 && answer === 'no');
 
     if (isCorrect) {
       console.log('Correct!');
       i += 1;
-      result += 1;
     } else {
       const correctAnswer = randomValue % 2 === 0 ? 'yes' : 'no';
       console.log(`'${answer}' is the wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
       break;
     }
-  }
 
-  if (result === maxQuestions) {
-    console.log(`Congratulations, ${name}!`);
+    if (i === maxQuestions) {
+      console.log(`Congratulations, ${name}!`);
+    }
   }
 }
 

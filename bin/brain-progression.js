@@ -9,7 +9,7 @@ console.log(`Hello, ${name}!`);
 
 console.log('What number is missing in the progression?');
 
-function findElementProgression(item = 0) {
+function findElementProgression() {
   for (let j = 0; j !== 3;) {
     const arr = [];
     let randomValue = Math.floor(Math.random() * 100);
@@ -44,7 +44,7 @@ function findElementProgression(item = 0) {
 
     arr[randomPos - 1] = missingItem;
 
-    result = arr.join(' '); // Используем метод join для объединения элементов массива в строку
+    result = arr.join(' ');
 
     console.log(`Question: ${result}`);
 
@@ -56,10 +56,10 @@ function findElementProgression(item = 0) {
       break;
     } else {
       console.log('Correct!');
-      item += 1;
+      j += 1;
     }
 
-    if (item === 3) {
+    if (j === 3) {
       console.log(`Congratulations, ${name}!`);
       break;
     }

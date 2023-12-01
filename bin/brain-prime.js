@@ -44,18 +44,19 @@ function isEasyValue(item = 0) {
     if (String(answer) !== String(getAnswer1)) {
       console.log(`'${answer}' is the wrong answer ;(. Correct answer was '${getAnswer1}'.`);
       console.log(`Let's try again, ${name}!`);
-      return item; // Возвращаем значение item
-    } else {
-      console.log('Correct!');
-      item += 1;
+      return item;
     }
 
-    if (item === 3) {
+    console.log('Correct!');
+    j += 1;
+
+    if (j === 3) {
       console.log(`Congratulations, ${name}!`);
-      return item; // Возвращаем значение item
+      return item;
     }
   }
+
+  return item;
 }
 
-// Присваиваем результат выполнения функции переменной item
-const result = isEasyValue();
+isEasyValue();

@@ -9,7 +9,7 @@ console.log(`Hello, ${name}!`);
 
 console.log('Find the greatest common divisor of given numbers.');
 
-function findNOD(item = 0) {
+function findNOD() {
   for (let j = 0; j !== 3;) {
     const randomValue = Math.floor(Math.random() * 100);
     const randomValue2 = Math.floor(Math.random() * 100);
@@ -49,18 +49,16 @@ function findNOD(item = 0) {
     if (Number(result) === Number(answer)) {
       console.log('Correct!');
       j += 1;
-      item += 1;
     } else {
       console.log(`'${answer}' is the wrong answer ;(. Correct answer was '${result}'.`);
       console.log(`Let's try again, ${name}!`);
       break;
     }
 
-    if (item === 3) {
+    if (j === 3) {
       console.log(`Congratulations, ${name}!`);
     }
   }
 }
 
 findNOD();
-

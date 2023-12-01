@@ -15,8 +15,6 @@ function arrayRandElement(arr = ['*', '+', '-']) {
 }
 
 function getCalc() {
-  let result = 0;
-
   for (let i = 0; i !== 3;) {
     const randomValue = Math.floor(Math.random() * 100);
     const randomValue2 = Math.floor(Math.random() * 100);
@@ -34,7 +32,6 @@ function getCalc() {
         break;
       } else {
         console.log('Correct!');
-        result += 1;
         i += 1;
       }
     } else if (randomElement === '+') {
@@ -45,7 +42,6 @@ function getCalc() {
         break;
       } else {
         console.log('Correct!');
-        result += 1;
         i += 1;
       }
     } else if (randomElement === '-') {
@@ -56,14 +52,12 @@ function getCalc() {
         break;
       } else {
         console.log('Correct!');
-        result += 1;
         i += 1;
       }
     }
-  }
-
-  if (result === 3) {
-    console.log(`Congratulations, ${name}!`);
+    if (i === 3) {
+      console.log(`Congratulations, ${name}!`);
+    }
   }
 }
 
