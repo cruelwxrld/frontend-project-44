@@ -23,7 +23,7 @@ const gameFunction = (description, playFunction) => {
       console.log(`Let's try again, ${name}!`);
       break;
     }
-    if (iteration === 0) console.log(`Congratulations, ${name}!`);
+    if (iteration === 0) console.log(`Congratulations, ${name}!`); 
   }
 };
 
